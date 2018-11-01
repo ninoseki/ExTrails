@@ -1,2 +1,4 @@
 # ExTrails
-Official SecurityTrails API client
+
+Simple Elixir wrapper for the [SecurityTrails API](https://securitytrails.com/).
+Elixir + SecurityTrails = ExTrails
