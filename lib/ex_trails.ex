@@ -4,6 +4,7 @@ defmodule ExTrails do
   both used as a standalone CLI or an Elixir application client
   """
   @user_agent "Elixir (ExTrails)"
+  @env Mix.env()
 
   alias ExTrails.V1.Client
   alias ExTrails.V1.Error
@@ -24,7 +25,11 @@ defmodule ExTrails do
   @doc """
   Generic method for making API requests using a client to SecurityTrails API
   """
-  def req(%Client{} = client, type, path, module) do
+  def req(client, type, path, module, env \\ @env)
+  def req(_, _, _, module, :test) do
+    _parse_response(%{status_code: 200, body: ExTrails.Mocks.get_mock(module)}, module)
+  end
+  def req(%Client{} = client, type, path, module, _) do
     url = _url(client, path)
     headers = [{"APIKEY", _authorization()}] ++ _default_headers()
 

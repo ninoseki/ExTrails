@@ -29,4 +29,7 @@ use Mix.Config
 #
 #     import_config "#{Mix.env()}.exs"
 
+config :ex_trails,
+  api_key: "REALAPIKEY"
+
 import_config("*.secret.exs")

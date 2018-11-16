@@ -1,0 +1,73 @@
+{
+  "hostname": "securitytrails.com",
+  "alexa_rank": 83756,
+  "current_dns": {
+    "a": {
+      "first_seen": "2017-05-26",
+      "values": [
+        {
+          "ip": "200.121.20.1",
+          "ip_count": 10231
+        }
+      ]
+    },
+    "aaaa": {
+      "first_seen": "2017-05-26",
+      "values": [
+        {
+          "ip": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+          "ip_count": 10231
+        }
+      ]
+    },
+    "mx": {
+      "first_seen": "2017-05-26",
+      "values": [
+        {
+          "priority": 50,
+          "host": "aspmx5.googlemail.com",
+          "host_count": 102341
+        },
+        {
+          "priority": 40,
+          "host": "aspmx4.googlemail.com",
+          "host_count": 200123
+        }
+      ]
+    },
+    "ns": {
+      "first_seen": "2017-05-26",
+      "values": [
+        {
+          "nameserver": "ns4.dnsmadeeasy.com",
+          "nameserver_count": 5213
+        },
+        {
+          "nameserver": "ns3.dnsmadeeasy.com",
+          "nameserver_count": 1223
+        }
+      ]
+    },
+    "soa": {
+      "first_seen": "2017-05-26",
+      "values": [
+        {
+          "ttl": 43200,
+          "email": "dns.dnsmadeeasy.com",
+          "email_count": 10
+        }
+      ]
+    },
+    "txt": {
+      "first_seen": "2017-05-26",
+      "values": [
+        {
+          "value": "v=spf1 a mx include:spf.google.com include:sendgrid.net  include:spf.mandrillapp.com"
+        },
+        {
+          "value": "include:datadrivenemail.com ?all, google-site-verification=GbnLta6smBzoW8Oes1WafBhRoBwx4YSnvY8SFoQHmpI"
+        }
+      ]
+    }
+  }
+}
