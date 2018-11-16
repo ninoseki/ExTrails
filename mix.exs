@@ -7,7 +7,16 @@ defmodule ExTrails.MixProject do
       version: "0.1.0",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+
+      # Docs
+      name: "ExTrails",
+      source_url: "https://github.com/dev-cyprium/ExTrails",
+      homepage_url: "https://securitytrails.com/",
+      docs: [
+        main: "ExTrails",
+        extras: ["README.md"]
+      ]
     ]
   end
 
@@ -23,7 +32,8 @@ defmodule ExTrails.MixProject do
   defp deps do
     [
       {:httpoison, "~> 1.4"},
-      {:jason, "~> 1.1"}
+      {:jason, "~> 1.1"},
+      {:ex_doc, "~> 0.19", only: :dev, runtime: false}
     ]
   end
 end
