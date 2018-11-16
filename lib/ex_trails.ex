@@ -10,9 +10,11 @@ defmodule ExTrails do
   alias ExTrails.Configuration
 
   @doc """
-  Using the generic request function, we mke a get request against
+  Get request used by the library.
+
+  Using the generic request function, we make a get request against
   a given path. This function can be used as a standalone function to
-  get a path, and is used by the library to build the actual wrappers for API
+  get a path, and is used by the library to build the actual wrappers for API.
   """
   @spec req_get(ExTrails.V1.Client.t(), binary(), module()) :: ExTrails.V1.Error.t()
   def req_get(%Client{} = client, path, module) do
