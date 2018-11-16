@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/dev-cyprium/ExTrails.svg?branch=master)](https://travis-ci.com/dev-cyprium/ExTrails)
 # ExTrails
 
 Simple Elixir wrapper for the [SecurityTrails API](https://securitytrails.com/).
