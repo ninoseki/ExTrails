@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/dev-cyprium/ExTrails.svg?branch=master)](https://travis-ci.com/dev-cyprium/ExTrails)
+[![Coverage Status](https://coveralls.io/repos/github/dev-cyprium/ExTrails/badge.svg?branch=master)](https://coveralls.io/github/dev-cyprium/ExTrails?branch=master)
 # ExTrails
 
 Simple Elixir wrapper for the [SecurityTrails API](https://securitytrails.com/).
