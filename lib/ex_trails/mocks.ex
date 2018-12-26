@@ -13,4 +13,7 @@ if Mix.env == :test do
       |> File.read!
     end
   end
+else
+  defmodule ExTrails.Mocks do
+  end
 end
