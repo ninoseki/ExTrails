@@ -27,7 +27,7 @@ defmodule ExTrails.Configuration do
   end
 
   @impl true
-  def handle_cast(:reconfigure, state) do
+  def handle_cast(:reconfigure, _) do
     state = Application.get_all_env(:ex_trails)
     {:noreply, state}
   end
