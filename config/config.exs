@@ -32,4 +32,6 @@ use Mix.Config
 config :ex_trails,
   api_key: "REALAPIKEY"
 
-import_config("*.secret.exs")
+if Mix.env() != :test do
+  import_config("*.secret.exs")
+end

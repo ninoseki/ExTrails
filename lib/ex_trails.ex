@@ -45,7 +45,6 @@ defmodule ExTrails do
 
     struct!(module, data)
   end
-
   defp _parse_response(%{status_code: err, body: body}, _) do
     case Jason.decode!(body) do
       %{"message" => message} -> %Error{message: message, status: err}
