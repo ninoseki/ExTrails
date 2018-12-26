@@ -28,7 +28,7 @@ Elixir + SecurityTrails = ExTrails
 
 ## Usage
 
-The ExTrails is a really dead simple API wrapper for SecurityTrails API. It wraps all the categories into modules. So for example, you may find the domain information endpoint inside `ExTrails.V1.Domain.info/2` function. 
+The ExTrails is a really simple API wrapper for SecurityTrails API. It wraps all the categories into modules. So for example, you may find the domain information endpoint inside `ExTrails.V1.Domain.info/2` function. 
 
 Keep in mind though that the first parameter to **every** wrapper function is gonna be the `Client` struct, which can easly be created ( disscussed below ).
 

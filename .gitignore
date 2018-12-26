@@ -27,3 +27,6 @@ ex_trails-*.tar
 
 # Ignore the private configuration file
 *.secret.exs
+
+# Ignore visual studio code configuration
+.vscode
