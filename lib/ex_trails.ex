@@ -3,12 +3,11 @@ defmodule ExTrails do
   Application ExTrails is an api client for SecurityTrails that can be
   both used as a standalone CLI or an Elixir application client
   """
-  @user_agent "Elixir (ExTrails)"
   @env Mix.env()
 
   alias ExTrails.V1.Client
   alias ExTrails.V1.Error
-  alias ExTrails.Configuration
+  alias ExTrails.UrlBuilder
 
   @doc """
   Get request used by the library.
@@ -30,8 +29,8 @@ defmodule ExTrails do
     _parse_response(%{status_code: 200, body: ExTrails.Mocks.get_mock(module)}, module)
   end
   def req(%Client{} = client, type, path, module, _) do
-    url = _url(client, path)
-    headers = [{"APIKEY", _authorization()}] ++ _default_headers()
+    url = UrlBuilder.make_url(client, path)
+    headers = UrlBuilder.default_headers()
 
     case Client.request(type, url, "", headers) do
       {:ok, response} -> _parse_response(response, module)
@@ -51,17 +50,5 @@ defmodule ExTrails do
     case Jason.decode!(body) do
       %{"message" => message} -> %Error{message: message, status: err}
     end
-  end
-
-  defp _url(%Client{endpoint: endpoint}, path) do
-    endpoint <> path
-  end
-
-  defp _authorization do
-    Configuration.config() |> Map.get(:api_key)
-  end
-
-  defp _default_headers do
-    [{"User-Agent", @user_agent}]
   end
 end
