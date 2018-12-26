@@ -24,6 +24,8 @@ defmodule ExTrails.MixProject do
         main: "ExTrails",
         extras: ["README.md"]
       ],
+      package: package(),
+      description: description(),
     ]
   end
 
@@ -43,5 +45,22 @@ defmodule ExTrails.MixProject do
       {:ex_doc, "~> 0.19", only: :dev, runtime: false},
       {:excoveralls, "~> 0.10", only: :test}
     ]
+  end
+
+  defp description do
+    "A simple wrapper package for SecurityTrails API"
+  end
+
+  defp package do
+    %{
+      name: "ex_trails",
+      licenses: ["MIT"],
+      links: %{
+        "GitHub": "https://github.com/dev-cyprium/ExTrails",
+        "Site": "https://securitytrails.com/",
+        "Api": "https://api.securitytrails.com/",
+        "Docs": "https://docs.securitytrails.com/"
+      }
+    }
   end
 end
