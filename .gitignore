@@ -26,4 +26,4 @@ ex_trails-*.tar
 .elixir_ls/
 
 # Ignore the private configuration file
-private.config.exs
+*.secret.exs
