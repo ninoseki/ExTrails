@@ -1,0 +1,8 @@
+{
+  "subdomains": [
+    "api",
+    "em",
+    "mail",
+    "www"
+  ]
+}
