@@ -43,7 +43,8 @@ defmodule ExTrails.MixProject do
       {:httpoison, "~> 1.4"},
       {:jason, "~> 1.1"},
       {:ex_doc, "~> 0.19", only: :dev, runtime: false},
-      {:excoveralls, "~> 0.10", only: :test}
+      {:excoveralls, "~> 0.10", only: :test},
+      {:inch_ex, only: :docs}
     ]
   end
 
