@@ -9,6 +9,10 @@ defmodule ExTrails.Configuration do
     GenServer.call(__MODULE__, :get) |> Enum.into(%{})
   end
 
+  def reconfigure do
+    GenServer.cast(__MODULE__, :reconfigure)
+  end
+
   # Server (callbacks)
 
   @impl true
@@ -20,5 +24,11 @@ defmodule ExTrails.Configuration do
   @impl true
   def handle_call(:get, _, state) do
     {:reply, state, state}
+  end
+
+  @impl true
+  def handle_cast(:reconfigure, state) do
+    state = Application.get_all_env(:ex_trails)
+    {:noreply, state}
   end
 end

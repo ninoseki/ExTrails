@@ -12,6 +12,7 @@ defmodule ExTrails.UrlBuilder do
   end
 
   def default_headers do
+
     api_key = Configuration.config()[:api_key]
     if api_key == nil do
       raise "Major Error! Application key is not configured. Please provide the api_key in one of the ways described in the documentation."
