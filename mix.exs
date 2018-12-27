@@ -25,7 +25,7 @@ defmodule ExTrails.MixProject do
         extras: ["README.md"]
       ],
       package: package(),
-      description: description(),
+      description: description()
     ]
   end
 
@@ -44,7 +44,7 @@ defmodule ExTrails.MixProject do
       {:jason, "~> 1.1"},
       {:ex_doc, "~> 0.19", only: :dev, runtime: false},
       {:excoveralls, "~> 0.10", only: :test},
-      {:inch_ex, only: :docs}
+      {:inch_ex, "~> 1.0", only: :docs}
     ]
   end
 
@@ -57,10 +57,10 @@ defmodule ExTrails.MixProject do
       name: "ex_trails",
       licenses: ["MIT"],
       links: %{
-        "GitHub": "https://github.com/dev-cyprium/ExTrails",
-        "Site": "https://securitytrails.com/",
-        "Api": "https://api.securitytrails.com/",
-        "Docs": "https://docs.securitytrails.com/"
+        GitHub: "https://github.com/dev-cyprium/ExTrails",
+        Site: "https://securitytrails.com/",
+        Api: "https://api.securitytrails.com/",
+        Docs: "https://docs.securitytrails.com/"
       }
     }
   end
