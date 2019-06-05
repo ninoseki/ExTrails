@@ -3,4 +3,10 @@ defmodule ExTrails.V1.Domain.Subdomains do
     :subdomains,
     :endpoint
   ]
+
+  alias __MODULE__
+
+  def parse(%Subdomains{} = subdomains) do
+    subdomains
+  end
 end

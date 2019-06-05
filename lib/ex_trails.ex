@@ -43,7 +43,9 @@ defmodule ExTrails do
       |> Enum.map(fn {key, val} -> {String.to_existing_atom(key), val} end)
       |> Enum.into(%{})
 
-    struct!(module, data)
+    module
+    |> struct!(data)
+    |> module.parse
   end
   defp _parse_response(%{status_code: err, body: body}, _) do
     case Jason.decode!(body) do
