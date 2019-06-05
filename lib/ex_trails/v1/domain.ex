@@ -3,6 +3,7 @@ defmodule ExTrails.V1.Domain do
   alias ExTrails.V1.Client
   alias ExTrails.V1.Domain.DomainInfo
   alias ExTrails.V1.Domain.Subdomains
+  alias ExTrails.V1.Domain.Tags
 
   @doc """
   Wrapper function for: https://api.securitytrails.com/v1/domain/(hostname)
@@ -22,5 +23,15 @@ defmodule ExTrails.V1.Domain do
   """
   def subdomains(%Client{} = client, hostname) do
     req_get(client, "/domain/#{hostname}/subdomains", Subdomains)
+  end
+
+  @doc """
+  Wraper function for: https://api.securitytrails.com/v1/domain/(hostname)/tags
+
+  Return the tags for a given hostname in a list.
+  See documentation at https://docs.securitytrails.com/v1.0/reference#list-tags
+  """
+  def tags(%Client{} = client, hostname) do
+    req_get(client, "/domain/#{hostname}/tags", Tags)
   end
 end

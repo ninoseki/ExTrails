@@ -1,0 +1,6 @@
+{
+  "tags": [
+    "malware"
+  ],
+  "endpoint": "/v1/domain/mocked.com/tags"
+}

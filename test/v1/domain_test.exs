@@ -16,5 +16,9 @@ defmodule ExTrails.V1.Domain.DomainTest do
     test "the domain sudomains yields results", %{client: client} do
       Domain.subdomains(client, "mocked.com")
     end
+
+    test "the domain tags yields results", %{client: client} do
+      Domain.tags(client, "mocked.com")
+    end
   end
 end
