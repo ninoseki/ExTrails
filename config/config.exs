@@ -30,7 +30,7 @@ use Mix.Config
 #     import_config "#{Mix.env()}.exs"
 
 config :ex_trails,
-  api_key: "REALAPIKEY"
+  api_key: System.get_env("SCT_API_KEY") || "REALAPIKEY"
 
 if Mix.env() != :test do
   import_config("*.secret.exs")
